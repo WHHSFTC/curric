@@ -17,7 +17,7 @@ public abstract class Vehicle {
 	//...
 }
 
-public class Car {
+public class Car extends Vehicle {
 	//...
 	public void makeNoise() {
 		goVrooom();
@@ -25,7 +25,7 @@ public class Car {
 	//...
 }
 
-public class Bike {
+public class Bike extends Vehicle {
 	//...
 	public void makeNoise() {
 		squeeak();
@@ -38,3 +38,30 @@ public class Bike {
 Now we introduce a new structure of OOP. Interfaces are collections of abstract functions. Interfaces have the same polymorphic traits as abstract superclasses, with a few exceptions: interfaces cannot have any function bodies defined; interfaces are `implement`ed by classes and `extend`ed only by other interfaces; multiple interfaces can be implemented or extended.
 
 It is often best to think about an interface as a well defined set of functionality. Using interfaces has the advantage that you can maintain multiple implementations of an interface and swap out implementations by changing only the line where a class is instantiated and cast as the interface. This has many useful implications, especially in rapidly changing code bases like code for a robot, where major design changes involve changing an implementation in the code, while preserving all logic code that manipulates the robot through the interfaces. 
+
+For example, instead of having the `makeNoise` method be apart of the `Vehicle` abstract class, we can have an interface instead:
+```java
+public abstract class Vehicle {
+	//...
+}
+
+interface Noisy {
+	public void makeNoise(); // the function is by default an abstract function
+}
+
+public class Car extends Vehicle implements Noisy {
+	//...
+	public void makeNoise() {
+		goVrooom();
+	}
+	//...
+}
+
+public class Bike extends Vehicle implements Noisy {
+	//...
+	public void makeNoise() {
+		squeeak();
+	}
+	//...
+}
+```

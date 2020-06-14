@@ -33,9 +33,9 @@
   ```
   `int[] arr` is `[0, 0, 0, 0, 0]`
   To access a value in an array, an index is required.
-  :::info
-  All array indices start at 0 and go up to the length of the array - 1
-  :::
+  
+  > All array indices start at 0 and go up to the length of the array - 1
+  
   ```java
   int[] arr = new int[5];
   
@@ -44,14 +44,16 @@
   arr[2] = 3;
   arr[3] = 4;
   arr[4] = 5;
+
+  System.out.println(Arrays.toString(arr)); // prints out the list in readable form, this is imported from java.util.Arrays
   ```
   `int[] arr` is now `[ 1, 2, 3, 4, 5]`
-  :::info
-  You can create an array of any type, just use `[]` after the type and it will become an array. i.e. `int[] double[] byte[] String[] char[] boolean[]`
-  :::
+  
+  > You can create an array of any type, just use `[]` after the type and it will become an array. i.e. `int[] double[] byte[] String[] char[] boolean[]`
+  
 reference: 
 [Basic Types](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes)
-[Arrays](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html)
+and [Arrays](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html) and [Strings](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)
 
 
 All of the above types are known as primitives, except `String`. Primitive types begin with a lowercase letter and are the types you'd expect a language to handle intuitively. However, they don't have all the features of complex types like `String` and `ArrayList`, which you'll learn about later. For this reason, Java has a workaround known as auto-encapsulation where it will automatically treat primitives like `int` as complex wrappers like `Integer`, and vice versa, depending on context.
