@@ -1,8 +1,8 @@
 ./[curric](/curric)/[questions](/curric/questions)/[basics](/curric/questions/basics)/
 
-**Test out your knowledge that you have learned!!**
+## Test out your knowledge that you have learned!!
 
-*Try to trace the code. Don't put the code into an IDE and run it.*
+**Try to trace the code. Don't put the code into an IDE and run it.**
 
 Question 1: What does this `main` method output to the console?
 ```java
@@ -72,7 +72,7 @@ public static void main(String[] args) {
 }
 ```
 - `Hello Hello Hello Hello `
-- `Hello Hello Hello Hello`
+- `Hello Hello Hello`
 - `HelloHelloHelloHello`
 - `Hello`
 
